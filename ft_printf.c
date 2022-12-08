@@ -6,17 +6,33 @@
 /*   By: tdelgran <tdelgran@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 19:56:41 by tdelgran          #+#    #+#             */
-/*   Updated: 2022/12/06 23:57:49 by tdelgran         ###   ########.fr       */
+/*   Updated: 2022/12/08 16:37:36 by tdelgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_printf(const char *params, ...)
+int printf_conversion(va_list arg, char format)
 {
     int i;
+
+    i = 0;
+    if (format == 'c')
+        i += format_char(va_arg(arg, int));
+    else if (format == 's')
+        i += format_putstr(va_arg(arg, char *));
+    else if (format == 'p')
+        i += format_putnbr(va_arg(arg, unsigned int));
+    else if (format == 'd')
+        i +=
+    return (i);
+}
+
+int	ft_printf(const char *params, ...)
+{
+    int     i;
     va_list arg;
-    int stock;
+    int     stock;
     
     stock = 0;
     va_start(arg, params);

@@ -6,7 +6,7 @@
 /*   By: tdelgran <tdelgran@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 20:26:35 by tdelgran          #+#    #+#             */
-/*   Updated: 2022/12/06 23:55:49 by tdelgran         ###   ########.fr       */
+/*   Updated: 2022/12/08 16:36:39 by tdelgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@
 # include <stdarg.h>
 
 int     ft_printf(const char *format, ...);
-int     printf_conversion(va_list arg, char format);
 int	    format_char(int c);
 int     format_putstr(char *str);
-int     ft_putstr(char *str);
+int     format_putnbr(int nb);
 
 #endif
