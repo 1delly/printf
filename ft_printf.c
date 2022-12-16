@@ -6,7 +6,7 @@
 /*   By: tdelgran <tdelgran@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 19:56:41 by tdelgran          #+#    #+#             */
-/*   Updated: 2022/12/08 16:37:36 by tdelgran         ###   ########.fr       */
+/*   Updated: 2022/12/16 06:41:54 by tdelgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,17 @@ int printf_conversion(va_list arg, char format)
     else if (format == 'p')
         i += format_putnbr(va_arg(arg, unsigned int));
     else if (format == 'd')
+        i += format_putnbr(va_arg(arg, int));
+    else if (format == 'i')
+        i += format_putnbr(va_arg(arg, int));
+    else if (format == 'u')
+        i += format_putnbr(va_arg(arg, unsigned int));
+    else if (format == 'x')
         i +=
+    else if (format == 'X')
+        i +=
+    else if (format == '%')
+        i += format_char('%');
     return (i);
 }
 

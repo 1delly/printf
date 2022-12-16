@@ -6,11 +6,11 @@
 #    By: tdelgran <tdelgran@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/06 20:02:16 by tdelgran          #+#    #+#              #
-#    Updated: 2022/12/08 15:03:21 by tdelgran         ###   ########.fr        #
+#    Updated: 2022/12/16 04:57:07 by tdelgran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ft_printf.c format_putstr.c format_char.c
+SRCS = ft_printf.c utilitaires.c
 
 OBJS = $(SRCS:.c=.o)
 
