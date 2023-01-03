@@ -6,7 +6,7 @@
 /*   By: tdelgran <tdelgran@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 04:55:47 by tdelgran          #+#    #+#             */
-/*   Updated: 2022/12/16 06:31:09 by tdelgran         ###   ########.fr       */
+/*   Updated: 2023/01/03 15:44:03 by tdelgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	format_char(int c)
 {
 	write (1, &c, 1);
-    return (1);
+	return (1);
 }
 
 int	format_putnbr(int nb)
@@ -46,5 +46,15 @@ int	format_putstr(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
-    return i;
+	return (i);
+}
+
+int	format_hexa(int n)
+{
+	char	hex;
+	int		i;
+	int		temp;
+
+	i = 0;
+	temp = n 
 }
