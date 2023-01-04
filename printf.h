@@ -6,7 +6,7 @@
 /*   By: tdelgran <tdelgran@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 20:26:35 by tdelgran          #+#    #+#             */
-/*   Updated: 2022/12/16 06:51:06 by tdelgran         ###   ########.fr       */
+/*   Updated: 2023/01/04 21:37:11 by tdelgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 int		ft_printf(const char *format, ...);
 int		format_char(int c);
 int		format_putstr(char *str);
-int		format_putnbr(int nb);
+int     format_putnbr(int nb);
+int     format_hexa(int n);
 
 #endif
