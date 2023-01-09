@@ -6,7 +6,7 @@
 /*   By: tdelgran <tdelgran@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 04:55:47 by tdelgran          #+#    #+#             */
-/*   Updated: 2023/01/04 21:39:32 by tdelgran         ###   ########.fr       */
+/*   Updated: 2023/01/09 15:51:12 by tdelgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,5 @@ int	format_hexa(int n)
 		n = n / 16;
 	}
 	hex[i] = '\0';
-	return(n);
+	return(i);
 }

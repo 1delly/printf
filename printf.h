@@ -6,7 +6,7 @@
 /*   By: tdelgran <tdelgran@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 20:26:35 by tdelgran          #+#    #+#             */
-/*   Updated: 2023/01/04 21:37:11 by tdelgran         ###   ########.fr       */
+/*   Updated: 2023/01/09 16:22:31 by tdelgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ int		format_char(int c);
 int		format_putstr(char *str);
 int     format_putnbr(int nb);
 int     format_hexa(int n);
+int	    printf_conversion(va_list arg, const char *format, int a);
+int     main(void);
 
 #endif
