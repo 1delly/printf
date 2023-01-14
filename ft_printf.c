@@ -6,21 +6,21 @@
 /*   By: tdelgran <tdelgran@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 19:56:41 by tdelgran          #+#    #+#             */
-/*   Updated: 2023/01/09 16:23:04 by tdelgran         ###   ########.fr       */
+/*   Updated: 2023/01/14 03:41:03 by tdelgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	printf_conversion(va_list arg, const char *format, int a)
+int	printf_conversion(va_list arg, char format)
 {
 	int	i;
 
 	i = 0;
-	if (format[a + 1] == 'c')
+	if (format == 'c')
 		i += format_char(va_arg(arg, int));
-	/*else if (format == 's')
-		i += format_putstr(va_arg(arg, char *));
+	else if (format == 's')
+		i += format_strlen(va_arg(arg, char *));
 	else if (format == 'p')
 		i += format_putnbr(va_arg(arg, unsigned int));
 	else if (format == 'd')
@@ -34,7 +34,7 @@ int	printf_conversion(va_list arg, const char *format, int a)
 	else if (format == 'X')
 		i += format_hexa(va_arg(arg, int));
 	else if (format == '%')
-		i += format_char('%');*/
+		i += format_char('%');
 	return (i);
 }
 
@@ -51,7 +51,7 @@ int	ft_printf(const char *params, ...)
 	{
 		if (params[i] == '%')
 		{
-			stock += printf_conversion(arg, params, i);
+			stock += printf_conversion(arg, params[i + 1]);
 			i++;
 		}
 		format_char(params[i]);
