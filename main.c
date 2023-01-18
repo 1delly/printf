@@ -1,11 +1,11 @@
-#include "printf.h"
+#include "ft_printf.h"
 #include <stdio.h>
 
 int main(void)
 {
     int i = 42;
     char c = 'A';
-    char *s = "Hello, World!";
+    char *s = NULL;
     unsigned int u = 1234567890;
     int x = 255;
     int p = 100;
